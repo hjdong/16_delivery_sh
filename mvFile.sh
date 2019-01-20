@@ -9,6 +9,8 @@ cp $i/*vitamin* $i/result/Vitamin.txt
 cp $i/*.age_* $i/result/GutAge.txt
 cp $i/*bmi* $i/result/Forecasbmi.txt
 cp $i/*mdi* $i/result/MDI.txt
+cp $i/*skin* $i/result/AgeDifference.txt
+sed -i "s/\t/${i}\t/4" $i/result/AgeDifference.txt
 sed -i "s/Testsampleid/$i/" $i/result/*.txt
 sed -i "s/\t/${i}\t/4" $i/result/MDI.txt
 sed -i "s/nokiding/$i/" $i/result/*.txt
