@@ -1,4 +1,5 @@
 #!/bin/bash
+#Ueage: sh stools.sh /Project/Data_20190118 20190118
 for i in 015-081-006 016-043-020
 do
 cat $1/$i/result/Abundance.txt >> Abundance_stools_$2.txt
