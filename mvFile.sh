@@ -1,3 +1,5 @@
+#!/bin/bash
+#Ueage: sh mvFile.sh
 for i in 015-081-006 016-043-020 015-117-075
 do
 mkdir $i
