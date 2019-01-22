@@ -1,8 +1,13 @@
 #!/bin/bash
-#Ueage: sh skin.sh /Project/Data_20190118 20190118
-for i in 015-081-006 016-043-020
+#Usage: sh skin.sh /Project/Data_20190118 skinName.list 20190118
+
+results_dir=$1
+skinID=$2
+project_date=$3
+for i in `cat $skinID|cut -f1`
 do
-cat $1/$i/result/Abundance.txt >> Abundance_skin_v6_$2.txt
-cat $1/$i/result/Diversity.txt >> Diversity_skin_v6_$2.txt
-cat $1/$i/result/AgeDifference.txt >> geDifference_skin_v6_$2.txt
+cat $results_dir/$i/result/Abundance.txt >> Abundance_skin_v6_$project_date.txt
+cat $results_dir/$i/result/Diversity.txt >> Diversity_skin_v6_$project_date.txt
+cat $results_dir/$i/result/AgeDifference.txt >> AgeDifference_skin_v6_$project_date.txt
 done
+tar zcvf skin.$project_date.tar.gz *_skin_*
