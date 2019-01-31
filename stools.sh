@@ -1,5 +1,5 @@
 #!/bin/bash
-#Ueage: sh stools.sh /Project/Data_20190118 20190118
+#Ueage: sh stools.sh /Project/Data_20190118 stoolsName.list 20190118
 
 results_dir=$1
 stoolsID=$2
